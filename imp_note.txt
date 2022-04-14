@@ -1,0 +1,21 @@
+npm init -y
+npm i express mongoose 
+npm i -D nodemon (-D for devDependencies)
+
+npm i dotenv --> this for secure you keys
+    after instaling dotenv ...make a file (config.env)
+    then require at the top of main app.js --> 
+        const dotenv = require('dotenv');
+        dotenv.config({ path:'./config.env'});
+    after that you can use (process.env.Port,etc.)in any page
+
+npm i express-validator
+npm i bcryptjs (genSalt,hash,compare)
+npm i jsonwebtoken
+
+-----React ----
+npm i concurrently (this is for start multipul server)
+    add in the react package.json -scripts
+        "both":"concurrently \"npm run start\" \"backend/app.js\""
+
+npm i cors (this is for request in defferent port)
