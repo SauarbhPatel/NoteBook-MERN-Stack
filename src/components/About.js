@@ -42,7 +42,7 @@ const About = (props) => {
   let history = useHistory();
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (sessionStorage.getItem("token")) {
       getUser();
     } else {
       history.push("/login");

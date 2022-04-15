@@ -10,7 +10,7 @@ const Notes = (props) => {
   const { showAlert } = props;
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (sessionStorage.getItem("token")) {
       getNotes();
     } else {
       history.push("/login");

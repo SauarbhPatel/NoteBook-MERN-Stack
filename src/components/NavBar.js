@@ -15,7 +15,7 @@ const NavBar = () => {
   // }, [])
 
   const handalLogOut = () => {
-    localStorage.removeItem("token");
+    sessionStorage.removeItem("token");
     history.push("/");
     // setTimeout(() => {
     //   history.push("/");
@@ -60,7 +60,7 @@ const NavBar = () => {
         <div className="nav-right">
           <ul>
             <li
-              style={{ display: localStorage.getItem("token") ? "" : "none" }}
+              style={{ display: sessionStorage.getItem("token") ? "" : "none" }}
             >
               <Link
                 className={` ${
@@ -77,7 +77,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li
-              style={{ display: localStorage.getItem("token") ? "" : "none" }}
+              style={{ display: sessionStorage.getItem("token") ? "" : "none" }}
             >
               <Link
                 className={` ${
@@ -92,7 +92,7 @@ const NavBar = () => {
               </Link>
             </li>
             <li >
-              {!localStorage.getItem("token") ? (
+              {!sessionStorage.getItem("token") ? (
                 <Link
                   className={`loginButton ${
                     location.pathname === "/login" ? "make ackive class" : ""

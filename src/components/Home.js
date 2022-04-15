@@ -7,7 +7,7 @@ const Home = (props) => {
   const { addNote, getNotes } = context;
 
   useEffect(() => {
-    if (localStorage.getItem("token")) {
+    if (sessionStorage.getItem("token")) {
       getNotes();
     }
 
@@ -34,7 +34,7 @@ const Home = (props) => {
 
   return (
     <>
-      {localStorage.getItem("token") ? (
+      {sessionStorage.getItem("token") ? (
         <div className="home-section flex">
           <div className="home-box flex">
             <div className="home-box-left flex">

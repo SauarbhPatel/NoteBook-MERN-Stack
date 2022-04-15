@@ -29,7 +29,7 @@ const Login = (props) => {
 
         if(json.success === true){
             // save the auth token and redirect 
-            localStorage.setItem('token',json.authtoken)
+            sessionStorage.setItem('token',json.authtoken)
             history.push('/');
             props.showAlert("Login Successfully","success")
             
@@ -62,7 +62,7 @@ const Login = (props) => {
 
         if(json.success === true){
             // save the auth token and redirect 
-            localStorage.setItem('token',json.authtoken)
+            sessionStorage.setItem('token',json.authtoken)
             history.push('/');
             props.showAlert("New Account Created ","success");
 
