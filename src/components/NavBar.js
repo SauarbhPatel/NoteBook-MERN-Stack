@@ -47,10 +47,11 @@ const NavBar = () => {
             </li>
             <li>
               <Link
+                style={{ cursor:"not-allowed" }}
                 className={` nav-link ${
                   location.pathname === "/aboutUs" ? "nav-active" : ""
                 }`}
-                to="/aboutUs"
+                to="#"
               >
                 About Us
               </Link>
@@ -91,7 +92,7 @@ const NavBar = () => {
                 </div>
               </Link>
             </li>
-            <li >
+            <li>
               {!sessionStorage.getItem("token") ? (
                 <Link
                   className={`loginButton ${
@@ -107,7 +108,6 @@ const NavBar = () => {
                 </button>
               )}
             </li>
-        
           </ul>
         </div>
       </div>
