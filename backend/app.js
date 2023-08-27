@@ -3,7 +3,7 @@ dotenv.config({ path:'./config.env'})
 const connectToMongo = require('./src/database/db')
 const express = require('express');
 const cors = require('cors')
-const port =5000;
+const port =8000;
 // Database 
 connectToMongo();
 

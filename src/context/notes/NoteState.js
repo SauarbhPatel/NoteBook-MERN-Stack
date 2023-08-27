@@ -16,24 +16,24 @@ const NoteState = (props) => {
       var NoteContainer = document.getElementById("notesContainer");
       var NoteBox = NoteContainer.getElementsByClassName("note-box");
       let count = 0;
-      
-    for (var i = 0; i < NoteBox.length; i++) {
-      var Note = NoteBox[i].getElementsByClassName("note");
-      var title = Note[0].getElementsByTagName("h3")[1];
-      var value = title.getElementsByTagName("p")[0];
-      if (value) {
-        var textValue = value.textContent || value.innerHTML;
-        if (textValue.toUpperCase().indexOf(filterValue) > -1) {
-          NoteBox[i].style.display = "";
-          count += 1;
+
+      for (var i = 0; i < NoteBox.length; i++) {
+        var Note = NoteBox[i].getElementsByClassName("note");
+        var title = Note[0].getElementsByTagName("h3")[1];
+        var value = title.getElementsByTagName("p")[0];
+        if (value) {
+          var textValue = value.textContent || value.innerHTML;
+          if (textValue.toUpperCase().indexOf(filterValue) > -1) {
+            NoteBox[i].style.display = "";
+            count += 1;
+          } else {
+            NoteBox[i].style.display = "none";
+          }
         } else {
-          NoteBox[i].style.display = "none";
+          console.log("error");
         }
-      } else {
-        console.log("error");
       }
-    }
-    setCountNo({ totalNote: count });
+      setCountNo({ totalNote: count });
     }
   };
 

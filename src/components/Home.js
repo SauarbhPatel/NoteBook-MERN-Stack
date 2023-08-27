@@ -104,7 +104,7 @@ const Home = (props) => {
                 <span>
                   <span className="logo-animation">N</span>
                   <span className="logo-animation">O</span>
-                  <span className="logo-animation">O</span>
+                  <span className="logo-animation">T</span>
                   <span className="logo-animation">E</span>
                   <span className="logo-animation">B</span>
                   <span className="logo-animation">O</span>
